@@ -75,3 +75,71 @@ let people = [
 ];
 
 console.log(findOldestPerson(people));
+
+/*
+Part 3
+Write a program that prompts the user to enter the details of three movies -
+title, director, and year - and stores the data in an array of objects. Then, sort
+the array by the year and output the details of each movie to the console.
+
+*/
+
+// let threeMovies = [];
+
+// for(let i = 0; i < 2; i++){
+
+//   let movieTitle = prompt("Enter movie Title: ");
+
+// let movieDirector = prompt("Enter movie Director: ");
+
+// let movieYear = Number(prompt("Year of the Movie: "));
+
+// let movieInformation = {
+
+//   title: movieTitle,
+
+//   director: movieDirector,
+
+//   year: movieYear
+// }
+// threeMovies.push(movieInformation);
+
+// threeMovies.sort((a, b) => a.year - a.year)
+
+// }
+
+// console.log(threeMovies);
+
+
+/*
+Part 4
+Write a function called calculateTotalPrice that takes in an array of items (each
+item represented as an object with properties for name and price) and returns
+the total price of all items in the array.
+*/
+
+function calculateTotalPrice(){
+  let array = [];
+
+  let rice = {
+    name: "rice",
+    price: Number(7)
+  }
+  let spaghetti = {
+    name: "spaghetti",
+    price:Number(8),
+  }
+    
+  array.push(rice);
+  array.push(spaghetti);
+
+  array.sort((a, b) => a.price - b.price);
+
+  const totalPrice = array.reduce((sum, item) => sum + item.price, 0);
+
+  console.log(array);
+
+  console.log(totalPrice);
+}
+
+calculateTotalPrice();
